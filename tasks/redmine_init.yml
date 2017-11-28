@@ -14,10 +14,11 @@
     mode: 0664
     owner: "{{ redmine_unix_user }}"
     group: "{{ redmine_unix_group }}"
+  ignore_errors: true
 
 - name: Insert info about puma installation
   lineinfile:
-    path: "/opt/redmine/redmine-{{ redmine_version }}/Gemfile"
+    dest: "/opt/redmine/redmine-{{ redmine_version }}/Gemfile"
     insertbefore: '^gem "rails"'
     line: 'gem "puma"'
 

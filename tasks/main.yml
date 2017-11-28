@@ -30,13 +30,13 @@
     cd /opt/redmine && tar xfzv redmine-{{ redmine_version }}.tar.gz
   args:
     executable: /bin/bash
-
+# when: DownloadRedmineTGZ.changed
 # - name: Unpack redmine
 #   unarchive:
 #     src: "/opt/redmine/redmine-{{ redmine_version }}.tar.gz"
 #     dest: /opt/redmine
 #     remote_src: yes
-#   when: DownloadRedmineTGZ.changed
+#  when: DownloadRedmineTGZ.changed
 
 
 - include: fix_permissions.yml
