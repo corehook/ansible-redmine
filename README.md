@@ -40,6 +40,8 @@ Tested with:
 
 	---
 	- hosts: redmine
+	  user: deployer
+	  sudo: yes
 	  roles:
 	    - egeneralov.redmine
 	  vars:
