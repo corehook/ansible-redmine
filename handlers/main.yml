@@ -19,7 +19,7 @@
   bundler:
     state: present
     chdir: "/opt/redmine/redmine-{{ redmine_version }}"
-  listen: bundler_install
+  #listen: bundler_install
 
 - name: restart redmine
   service:
