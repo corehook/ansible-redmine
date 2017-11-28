@@ -65,12 +65,12 @@
     - redmine
     - redis-server
     - sidekiq
-    - redmine-bot
+    #- redmine-bot
 
 - include: start_service.yml
   with_items:
     - redmine
     - redis-server
     - sidekiq
-    - redmine-bot
+    #- redmine-bot
 
